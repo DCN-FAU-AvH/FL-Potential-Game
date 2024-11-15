@@ -1,0 +1,34 @@
+# FL scenario
+m: 100 # number of the clients
+T: 50 # number of the rounds
+alg: fedavg # fedavg
+seed: 77
+tag: FL # name tag for logging
+
+# dataset
+dataset: mnist # mnist or linreg or cifar10
+subset: 1 # use a subset of the whole dataset
+data_train: 10000 # training subset size
+data_test: 10000 # test subset size
+iid: 0 # data distribution
+
+# model
+model: cnn # neural network
+activation: relu # relu or sigmoid
+loss: cn # mse or cn
+
+# server side parameters
+frac: 1 # proportion of the active clients per round
+par_agg: 0 # aggregate over active/all clients
+
+# client side parameters
+optimizer: sgd # sgd or adam
+bs: 250 # batch size, false means FGD
+lr: 0.01 # learning rate
+NE: 20 # SGD epochs
+stg: epoch # effort or strategy type
+
+# Other parameters
+save_freq: 1 # callback
+device: cpu # cuda:0 or cpu
+plot: 1 # plot or not
