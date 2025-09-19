@@ -1,16 +1,16 @@
 # FL scenario
-m: 100 # number of the clients
-T: 50 # number of the rounds
-alg: fedavg # fedavg
-seed: 77
-tag: FL # name tag for logging
+m: 1000 # number of the clients
+T: 200 # number of the rounds
+alg: fedavg # fedavg fedprox moon
+case: 1 # four NE cases
 
 # dataset
-dataset: mnist # mnist or linreg or cifar10
+dataset: cifar10 # mnist or cifar10 or imdb or femnist
 subset: 1 # use a subset of the whole dataset
-data_train: 10000 # training subset size
+data_train: 40000 # training subset size
+data_val: 10000 # validation subset size (taken from training set)
 data_test: 10000 # test subset size
-iid: 0 # data distribution
+noniid: 2 # number of classes per client for non-iid setting, 0 means iid
 
 # model
 model: cnn # neural network
@@ -18,17 +18,29 @@ activation: relu # relu or sigmoid
 loss: cn # mse or cn
 
 # server side parameters
-frac: 1 # proportion of the active clients per round
-par_agg: 0 # aggregate over active/all clients
+frac: 0.1 # proportion of the active clients per round
 
 # client side parameters
 optimizer: sgd # sgd or adam
-bs: 250 # batch size, false means FGD
-lr: 0.01 # learning rate
-NE: 20 # SGD epochs
-stg: epoch # effort or strategy type
+bs: 20 # batch size, false means FGD
+lr: 0.05 # learning rate
+w_decay: 1.0e-4 # weight decay
+
+mu: 0.1 # proximal term weight for FedProx
+moon_mu: 0.1 # contrastive loss weight for MOON
+
+# Transformer parameters
+max_length: 256
+emb_dim: 128
+nhead: 2
+nhid: 128
+nlayers: 2
 
 # Other parameters
 save_freq: 1 # callback
-device: cpu # cuda:0 or cpu
+device: mps # cuda or cpu or mps
 plot: 1 # plot or not
+seed: 77
+tag: FL # name tag for logging
+T0: 0 # start round, if not 1, continue from the checkpoint
+

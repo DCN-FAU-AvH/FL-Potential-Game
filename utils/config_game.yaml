@@ -1,21 +1,23 @@
 # Trial scenario
 seed: 77
-tag: FL_Game # tag for saving 
+tag: FL_game # tag for folder 
+tag0: BR_running # tag for directory
 
 # FL-Game scenario
-m: 20 # number of clients
-T: 50 # number of rounds
-lamda: [0, 5, 0.05] # reward factor range
+m: 1000 # number of clients
+T: 200 # number of rounds
+lamda: [0, 5, 0.05] # reward [start, end, step]
 
 # parameters of the player
-data_vol: [500, 500] # range of the data size of clients
+data_vol: [40, 40] # range of the data size of clients
 alpha: [1, 2] # range of the running cost factor alpha_i
 reso_q: [1, 1] # range of the minimal efforts of clients
 reso_Q: [20, 30] # range of the resources of clients
-reso_distri: uniform # normal or uniform
+
+# femnist imlabalnced data volumes if provided path
+# ./utils/femnist_D_m3000_seed77.yaml
+femnist_D: "" 
 
 # parameters of the best-response algorithm
-solver: analytic
 stop_e: 1.0e-10
 stop_iter: 1000
-
