@@ -6,7 +6,7 @@
   <a href="https://doi.org/10.1016/j.physd.2026.135288">
     <img src="https://img.shields.io/badge/DOI-Physica D-blue" alt="Read the paper"/></a>
   <a href="https://arxiv.org/abs/2411.11793">
-    <img src="https://img.shields.io/badge/arXiv-2402.13989-b31b1b?logo=arxiv" alt="Read on arXiv"/></a>
+    <img src="https://img.shields.io/badge/arXiv-2411.11793-b31b1b?logo=arxiv" alt="Read on arXiv"/></a>
 </p>
 
 ## Overview
