@@ -1,10 +1,10 @@
-<h1 align="center">Potential Games in Federated Learning</h1>
+<h1 align="center">Nonlinear Equilibrium Transitions in a Potential Game Model for Federated Learning</h1>
 
 <h4 align="center"><a href="https://sites.google.com/view/liukang/home">Kang Liu</a>, <a href="https://iziqi.github.io/">Ziqi Wang</a>, and <a href="https://dcn.nat.fau.eu/enrique-zuazua/">Enrique Zuazua</a></h4>
 
 <p align="center">
   <a href="https://doi.org/10.1016/j.physd.2026.135288">
-    <img src="https://img.shields.io/badge/DOI-Physica D-blue" alt="Read the paper"/></a>
+    <img src="https://img.shields.io/badge/DOI-Physica D: Nonlinear Phenomena-blue" alt="Read the paper"/></a>
   <a href="https://arxiv.org/abs/2411.11793">
     <img src="https://img.shields.io/badge/arXiv-2411.11793-b31b1b?logo=arxiv" alt="Read on arXiv"/></a>
 </p>
